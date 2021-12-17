@@ -8,7 +8,7 @@ import java.util.List;
 public class Client
 {
 	protected String nom;
-	protected int montant;
+	
 	
 	
 	/** 
@@ -52,7 +52,7 @@ public class Client
 		Facture facture = new Facture();
 		
 		
-		return facture;
+		return facture.getMontant();
 	}
 	
 	/**

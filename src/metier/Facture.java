@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class Facture
 {
+	protected int montant;
 	protected boolean reglee;
 	
 	/**
@@ -13,7 +14,7 @@ public class Facture
 	
 	public Client getClient()
 	{
-		return null;
+		return this.getClient();
 	}
 
 	/**
@@ -23,7 +24,7 @@ public class Facture
 	
 	public int getMontant()
 	{
-		return 0;
+		return montant;
 	}
 
 	/**
