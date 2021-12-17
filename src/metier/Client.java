@@ -9,14 +9,14 @@ import java.util.List;
 public class Client
 {
 	private String nom;
-	
+
 	private static List<Client> clientList = new ArrayList<Client>();
-	
+
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
-	
+
 	public Client(String nom)
 	{
 		this.nom = nom;
@@ -27,37 +27,37 @@ public class Client
 	 * Retourne le nom du client.
 	 * @return le nom du client.
 	 */
-	
+
 	public String getNom()
 	{
 		return nom;
 	}
-	
+
 	/**
 	 * Modifie le nom du client.
 	 * @param nom le nom du client.
 	 */
-	
+
 	public void setNom(String nom)
 	{
 		this.nom = nom;
 	}
-	
+
 	/**
 	 * Créé une facture.
 	 * @param montant Le montant de la facture.
 	 * @return la facture créée.
 	 */
-	
+
 	public List<Facture> facture = new ArrayList<Facture>();
-	
+
 	public Facture createFacture(int montant)
 	{
 		Facture factureFinale = new Facture(this, montant, true, LocalDate.now());
 		facture.add(factureFinale);
 		return factureFinale;
 	}
-	
+
 	/**
 	 * Retourne une copie de la liste des factures du client. 
 	 * @return une copie de la liste des factures du client.
@@ -67,25 +67,20 @@ public class Client
 	{
 		List<Facture> factureFinale = new ArrayList<Facture>();
 		for (int i = 0; i< facture.size(); i++) 
-		{
-			factureFinale.add(facture.get(i));
-		}
+		factureFinale.add(facture.get(i));
 		return factureFinale;
 	}
-	
+
 	/**
 	 * Retourne la somme des montants des factures.
 	 * @return la somme des montants des factures.
 	 */
-	
+
 	public int sommeMontants()
 	{
 		int montant = 0;
-		
 		for (int i = 0; i < facture.size(); i++)
-		{
-			montant = facture.get(i).getMontant() + montant;
-		}
+		montant = facture.get(i).getMontant() + montant;
 		return montant;
 	}
 
@@ -95,14 +90,13 @@ public class Client
 	 * @param reglée Vrai si la facture est reglée.
 	 * @return la facture créée.
 	 */
-	
+
 	public Facture createFacture(int montant, boolean reglee)
 	{
 		Facture facturereglee = new Facture(montant, reglee);
-		
 		return facturereglee;
 	}	
-	
+
 	/**
 	 * Retourne la liste des factures reglées. 
 	 * @return la liste des factures reglées.
@@ -112,22 +106,22 @@ public class Client
 	{
 		return null;
 	}
-	
+
 
 	/**
 	 * Retourne tous les clients créés.
 	 * @return une copie de la liste de tous les clients.
 	 */
-	
+
 	public static List<Client> tous()
 	{
 		return null;
 	}
-	
+
 	/**
 	 * Supprime le client.
 	 */
-	
+
 	public void delete()
 	{
 		clientList.remove(this);
