@@ -9,7 +9,7 @@ public class Client
 {
 	private String nom;
 	
-	
+	private static List<Client> clientList = new ArrayList<Client>();
 	
 	/** 
 	 * Crée un client.
@@ -19,6 +19,7 @@ public class Client
 	public Client(String nom)
 	{
 		this.nom = nom;
+		clientList.add(this);
 	}
 
 	/**
@@ -104,6 +105,7 @@ public class Client
 	 * Retourne tous les clients créés.
 	 * @return une copie de la liste de tous les clients.
 	 */
+	
 	public static List<Client> tous()
 	{
 		return null;
