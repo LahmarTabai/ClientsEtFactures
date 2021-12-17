@@ -12,6 +12,13 @@ public class Facture
 		this.montant = montant;
 	}
 	
+	public Facture(int montant2, boolean reglee2) 
+	{
+		this.montant = montant2;
+		this.reglee = reglee2;
+		
+	}
+
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
