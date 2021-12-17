@@ -3,8 +3,15 @@ package metier;
 import java.util.ArrayList;
 import java.util.List;
 
+import Polymorphisme.Animal;
+import Polymorphisme.Chien;
+
 public class Client
 {
+	protected String nom;
+	protected int montant;
+	
+	
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
@@ -12,6 +19,7 @@ public class Client
 	
 	public Client(String nom)
 	{
+		this.nom = nom;
 	}
 
 	/**
@@ -21,7 +29,7 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return nom;
 	}
 	
 	/**
@@ -31,6 +39,7 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom = nom;
 	}
 	
 	/**
@@ -41,7 +50,10 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return null;
+		Facture facture = new Facture();
+		
+		
+		return facture;
 	}
 	
 	/**
