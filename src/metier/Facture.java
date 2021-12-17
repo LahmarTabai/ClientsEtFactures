@@ -4,8 +4,13 @@ import java.time.LocalDate;
 
 public class Facture
 {
-	protected int montant;
-	protected boolean reglee;
+	private int montant;
+	private boolean reglee;
+	
+	public Facture(int montant)
+	{
+		this.montant = montant;
+	}
 	
 	/**
 	 * Retourne le client à qui est adressée la facture..

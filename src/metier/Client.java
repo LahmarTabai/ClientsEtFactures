@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Client
 {
-	protected String nom;
+	private String nom;
 	
 	
 	
@@ -49,8 +49,7 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		Facture facture = new Facture();
-		
+		Facture facture = new Facture(montant);
 		
 		return facture;
 	}
@@ -62,7 +61,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return null;
+		return this.getFactures();
 	}
 	
 	/**
