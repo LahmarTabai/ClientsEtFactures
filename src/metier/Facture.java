@@ -76,6 +76,7 @@ public class Facture
 	
 	public void delete()
 	{
+		nom.facturesReglees().remove(this);
 	}
 	
 	/**

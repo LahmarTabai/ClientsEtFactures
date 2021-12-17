@@ -1,5 +1,6 @@
 package metier;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,11 +49,13 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
+	public List<Facture> facture = new ArrayList<Facture>();
+	
 	public Facture createFacture(int montant)
 	{
-		Facture facture = new Facture(montant);
-		
-		return facture;
+		Facture factureFinale = new Facture(this, montant, true, LocalDate.now());
+		facture.add(factureFinale);
+		return factureFinale;
 	}
 	
 	/**
@@ -62,8 +65,12 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		
-		return this.getFactures();
+		List<Facture> factureFinale = new ArrayList<Facture>();
+		for (int i = 0; i< facture.size(); i++) 
+		{
+			factureFinale.add(facture.get(i));
+		}
+		return factureFinale;
 	}
 	
 	/**
@@ -73,7 +80,13 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		int montant = 0;
+		
+		for (int i = 0; i < facture.size(); i++)
+		{
+			montant = facture.get(i).getMontant() + montant;
+		}
+		return montant;
 	}
 
 	/**
@@ -117,5 +130,6 @@ public class Client
 	
 	public void delete()
 	{
+		clientList.remove(this);
 	}
 }
