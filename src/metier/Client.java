@@ -9,8 +9,7 @@ import java.util.List;
 public class Client
 {
 	private String nom;
-
-	private static List<Client> clientList = new ArrayList<Client>();
+	public static List<Client> clientList = new ArrayList<Client>();
 
 	/** 
 	 * Crée un client.
@@ -67,7 +66,7 @@ public class Client
 	{
 		List<Facture> factureFinale = new ArrayList<Facture>();
 		for (int i = 0; i< facture.size(); i++) 
-		factureFinale.add(facture.get(i));
+			factureFinale.add(facture.get(i));
 		return factureFinale;
 	}
 
@@ -80,7 +79,7 @@ public class Client
 	{
 		int montant = 0;
 		for (int i = 0; i < facture.size(); i++)
-		montant = facture.get(i).getMontant() + montant;
+			montant = facture.get(i).getMontant() + montant;
 		return montant;
 	}
 
