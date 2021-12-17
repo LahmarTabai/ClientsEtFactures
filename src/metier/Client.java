@@ -3,8 +3,7 @@ package metier;
 import java.util.ArrayList;
 import java.util.List;
 
-import Polymorphisme.Animal;
-import Polymorphisme.Chien;
+
 
 public class Client
 {
