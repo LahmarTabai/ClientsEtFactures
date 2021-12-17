@@ -52,7 +52,7 @@ public class Client
 
 	public Facture createFacture(int montant)
 	{
-		Facture factureFinale = new Facture(this, montant, true, LocalDate.now());
+		Facture factureFinale = new Facture(this, montant, false, LocalDate.now());
 		facture.add(factureFinale);
 		return factureFinale;
 	}
