@@ -10,7 +10,7 @@ public class Client
 {
 	private static List<Client> clientList = new ArrayList<Client>();
 	private String nom;
-	public List<Facture> facture = new ArrayList<Facture>();
+	private List<Facture> facture = new ArrayList<Facture>();
 
 	/** 
 	 * Crée un client.
