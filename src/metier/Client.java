@@ -8,8 +8,9 @@ import java.util.List;
 
 public class Client
 {
+	private static List<Client> clientList = new ArrayList<Client>();
 	private String nom;
-	public static List<Client> clientList = new ArrayList<Client>();
+	public List<Facture> facture = new ArrayList<Facture>();
 
 	/** 
 	 * Crée un client.
@@ -48,7 +49,6 @@ public class Client
 	 * @return la facture créée.
 	 */
 
-	public List<Facture> facture = new ArrayList<Facture>();
 
 	public Facture createFacture(int montant)
 	{
