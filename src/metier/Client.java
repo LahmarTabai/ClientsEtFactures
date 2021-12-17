@@ -52,7 +52,7 @@ public class Client
 		Facture facture = new Facture();
 		
 		
-		return facture.getMontant();
+		return facture;
 	}
 	
 	/**
