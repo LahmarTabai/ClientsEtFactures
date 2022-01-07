@@ -107,6 +107,7 @@ public class Client
 		Facture facturereglee = new Facture(montant, reglee);
 		return facturereglee;
 	}	
+	
 
 	/**
 	 * Retourne la liste des factures reglées. 
