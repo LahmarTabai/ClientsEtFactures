@@ -103,7 +103,11 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return null;
+		List<Facture> facturesReglees = new ArrayList<>();
+		for (Facture facture : facture)
+			if(facture.estReglee())
+				facturesReglees.add(facture);
+		return facturesReglees;
 	}
 
 
@@ -114,7 +118,7 @@ public class Client
 
 	public static List<Client> tous()
 	{
-		return null;
+		return clientList;
 	}
 
 	/**
