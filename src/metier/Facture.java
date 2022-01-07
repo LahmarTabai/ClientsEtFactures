@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Facture
 {
-	private Client nom;
+	private Client client;
 	private int montant;
 	private boolean reglee;
 	private LocalDate date;
@@ -19,9 +19,9 @@ public class Facture
 		this.reglee = reglee2;
 	}
 
-	public Facture(Client nom, int montant2, boolean reglee2, LocalDate date) 
+	public Facture(Client client, int montant2, boolean reglee2, LocalDate date) 
 	{
-		this.nom = nom;
+		this.client = client;
 		this.montant = montant2;
 		this.reglee = reglee2;
 		this.date = date;
@@ -37,7 +37,7 @@ public class Facture
 
 	public Client getClient()
 	{
-		return nom;
+		return client;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class Facture
 
 	public void delete()
 	{
-		nom.facturesReglees().remove(this);
+		client.facturesReglees().remove(this);
 	}
 
 	/**
@@ -86,6 +86,6 @@ public class Facture
 
 	public Facture copie()
 	{
-		return nom.createFacture(montant, reglee);
+		return client.createFacture(montant, reglee);
 	}
 }
