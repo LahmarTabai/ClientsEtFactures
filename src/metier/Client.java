@@ -105,8 +105,8 @@ public class Client
 	{
 		List<Facture> facturesReglees = new ArrayList<>();
 		for (Facture facture : facture)
-		if(facture.estReglee())
-		facturesReglees.add(facture);
+			if(facture.estReglee())
+				facturesReglees.add(facture);
 		return facturesReglees;
 	}
 
