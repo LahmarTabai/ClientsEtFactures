@@ -81,7 +81,9 @@ public class Client
 	{
 		int montant = 0;
 		for (int i = 0; i < facture.size(); i++)
+		{
 			montant = facture.get(i).getMontant() + montant;
+		}
 		return montant;
 	}
 
@@ -107,8 +109,12 @@ public class Client
 	{
 		List<Facture> facturesReglees = new ArrayList<>();
 		for (Facture facture : facture)
+		{
 			if(facture.estReglee())
+			{
 				facturesReglees.add(facture);
+			}
+		}
 		return facturesReglees;
 	}
 
