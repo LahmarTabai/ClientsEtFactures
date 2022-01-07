@@ -69,7 +69,7 @@ public class Client
 		{
 			factureFinale.add(facture.get(i));
 		}
-			return factureFinale;
+		return factureFinale;
 	}
 
 	/**
