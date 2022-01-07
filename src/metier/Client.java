@@ -65,9 +65,11 @@ public class Client
 	public List<Facture> getFactures()
 	{
 		List<Facture> factureFinale = new ArrayList<Facture>();
-		for (int i = 0; i< facture.size(); i++) 
+		for (int i = 0; i< facture.size(); i++)
+		{
 			factureFinale.add(facture.get(i));
-		return factureFinale;
+		}
+			return factureFinale;
 	}
 
 	/**
